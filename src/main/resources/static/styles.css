@@ -1,0 +1,107 @@
+html {
+  background-color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+}
+
+p {
+  margin: 0;
+  color: #fff;
+}
+
+form {
+  width: 75%;
+  margin: 25px auto 0 auto;
+  color: rgba(255,255,255,.7);
+}
+
+form h1 {
+	font-size: 2em;
+	margin: 0 0 25px 0;
+}
+
+form div {
+	margin: 0 0 20px 0;
+}
+
+form div:last-of-type {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid rgba(255,255,255,.4);
+}
+
+form input {
+	padding: 5px 12px;
+	width: 80%;
+	color: #fff;
+	font-size: .9em;
+	background-color: rgba(255,255,255,.2);
+	outline: none;
+	border: 1px solid rgba(0,0,0,0);
+}
+
+form input[type="submit"] {
+	width: auto;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+
+form input[type="radio"] {
+	width: auto;
+	margin-right: 5px;
+}
+
+form input:focus,
+ form input[type="submit"]:hover {
+    border-color: #f29f27;
+    background-color: #404015;
+}
+
+.circle {
+    border-radius: 100px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
