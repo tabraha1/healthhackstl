@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <link type="text/css" rel="stylesheet" th:href="@{css/mood.css}">
+</head>
+<body>
+
+<h1>How are you feeling about this health check?</h1>
+
+<section class="intro">
+    <h1 class="title">Hello! Your virtual self needs a health check!</h1>
+    <p class="description">  Keep your digital self healthy, you will feel bad and start getting sick... You should feed your digital self, when it becomes hungry, and take it to doctor, when it becomes ill. Just take care of your self like your digital you!</p>
+</section>
+
+<div class="emoji-toggle emoji-happy">
+    <input type="checkbox" id="toggle1" class="toggle">
+    <div class="emoji"></div>
+    <label for="toggle1" class="well"></label>
+</div>
+
+<style>
+
+.intro {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  width: 35%;
+  color: #333;
+  text-shadow: 1px 1px 1px #fff;
+  font-size: 15px;
+}
+
+.intro .title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 50px 0;
+}
+
+.emoji-toggle {
+  position: relative;
+  width: 60px;
+  margin: 200px auto;
+}
+.emoji-toggle .well, h1 {
+  display: block;
+  background: #eee;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.emoji-toggle .toggle {
+  opacity: 0;
+  border: 0;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+}
+.emoji-toggle .toggle ~ .emoji:before {
+  content: "\01F431";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  font-size: 40px;
+  transition: 0.2s;
+}
+.emoji-toggle .toggle:checked ~ .emoji:before {
+  left: 100%;
+  margin-left: -1em;
+}
+.emoji-toggle .toggle ~ label {
+  white-space: nowrap;
+}
+.emoji-toggle .toggle ~ label:before {
+  position: absolute;
+  right: 100%;
+  margin-right: 5px;
+  top: 0;
+}
+.emoji-toggle .toggle ~ label:after {
+  position: absolute;
+  left: 100%;
+  margin-left: 5px;
+  top: 0;
+}
+
+.emoji-happy .toggle ~ .emoji:before {
+  content: "😄";
+}
+.emoji-happy .toggle:checked ~ .emoji:before {
+  content: "😠";
+}
+.emoji-happy .toggle ~ label:before {
+  content: "Happy";
+}
+.emoji-happy .toggle ~ label:after {
+  content: "Unhappy";
+}
+</style>
+
+</body>
+</html>
