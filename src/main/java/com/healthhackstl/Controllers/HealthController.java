@@ -31,4 +31,34 @@ public class HealthController {
 
         return "health/smoke";
     }
+
+    @RequestMapping(value="/sleep")
+    public String sleep(Model model) {
+
+        return "health/sleep";
+    }
+
+    @RequestMapping(value="/depressed")
+    public String depressed(Model model) {
+
+        return "health/depressed";
+    }
+
+    @RequestMapping(value="/diabetes")
+    public String diabetes(Model model) {
+
+        return "health/diabetes";
+    }
+
+    @RequestMapping(value="/sick")
+    public String sick(Model model) {
+
+        return "health/sick";
+    }
+
+    @RequestMapping(value="/feeling")
+    public String feeling(Model model) {
+
+        return "health/feeling";
+    }
 }
