@@ -1,4 +1,4 @@
-package com.healthhackstl;
+package com.healthhackstl.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,12 +30,6 @@ public class SignupController {
     public String welcome(Model model) {
 
         return "new/welcome";
-    }
-
-    @RequestMapping(value="/diet")
-    public String diet(Model model) {
-
-        return "new/diet";
     }
 
 

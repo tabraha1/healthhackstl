@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+
+<style>
+p {
+text-align: center;
+font-size: 3em;
+}
+
+.emoji-toggle {
+position: relative;
+width: 60px;
+margin: 90px auto;
+}
+.emoji-toggle .well {
+display: block;
+background: #eee;
+height: 20px;
+border-radius: 10px;
+cursor: pointer;
+}
+.emoji-toggle .toggle {
+opacity: 0;
+border: 0;
+outline: none;
+height: 100%;
+width: 100%;
+background: transparent;
+position: absolute;
+cursor: pointer;
+z-index: 100;
+}
+.emoji-toggle .toggle ~ .emoji:before {
+content: "\01F431";
+position: absolute;
+left: 0;
+top: -15px;
+font-size: 40px;
+transition: 0.2s;
+}
+.emoji-toggle .toggle:checked ~ .emoji:before {
+left: 100%;
+margin-left: -1em;
+}
+.emoji-toggle .toggle ~ label {
+white-space: nowrap;
+}
+.emoji-toggle .toggle ~ label:before {
+position: absolute;
+right: 100%;
+margin-right: 5px;
+top: 0;
+}
+.emoji-toggle .toggle ~ label:after {
+position: absolute;
+left: 100%;
+margin-left: 5px;
+top: 0;
+}
+
+.emoji-food .toggle ~ .emoji:before {
+content: "🚬";
+}
+.emoji-food .toggle:checked ~ .emoji:before {
+content: "🚫";
+}
+.emoji-food .toggle ~ label:before {
+content: "Smoker";
+font-size:2em;
+}
+.emoji-food .toggle ~ label:after {
+content: "Not Smoker";
+font-size:2em;
+}
+
+</style>
+
+
+<div>
+    <p>Are you a smoker?</h1>
+</div>
+
+<div class="emoji-toggle emoji-food">
+    <input type="checkbox" id="toggle3" class="toggle">
+    <div class="emoji"></div>
+    <label for="toggle3" class="well"></label>
+</div>
+
+</body>
+</html>
