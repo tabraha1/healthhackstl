@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+<header th:replace="fragments :: header"></header>
+
+<div class="loading">
+    <div class="loading__dots">
+        <div class="loading__dots__dot"></div>
+        <div class="loading__dots__dot"></div>
+        <div class="loading__dots__dot"></div>
+    </div>
+    <div class="loading__msg">Hold tight, while we get your data...</div>
+</div>
+
+<script type="text/javascript">
+function leave() {
+  window.location = "http://localhost:8080/signup/start/welcome";
+}
+setTimeout("leave()", 5000);
+</script>
+
+</body>
+</html>

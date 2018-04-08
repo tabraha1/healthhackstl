@@ -4,19 +4,38 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+@RequestMapping(value="/signup")
 @Controller
 public class SignupController {
 
-    @RequestMapping(value="/signup")
+    @RequestMapping(value="")
     public String index(Model model) {
 
         return "new/signup";
     }
 
-    @RequestMapping(value="signup/mood")
+    @RequestMapping(value="/start")
+    public String ready(Model model) {
+
+        return "new/ready";
+    }
+
+    @RequestMapping(value="start/mood")
     public String mood(Model model) {
 
-        return "mood/healthmood";
+        return "new/healthmood";
+    }
+
+    @RequestMapping(value="start/welcome")
+    public String welcome(Model model) {
+
+        return "new/welcome";
+    }
+
+    @RequestMapping(value="/diet")
+    public String diet(Model model) {
+
+        return "new/diet";
     }
 
 

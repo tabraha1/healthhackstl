@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/css/welcome.css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="centered">
+        <div class="one"> Welcome </div>
+        <div class="two"> to</div>
+        <br/>
+        <div class="three"> Health-Nut </div>
+        <br/>
+        <button class="four">Are you ready?</button>
+    </div>
+
+    <script>
+    $(window).scroll(function(){
+    $(".container").css("opacity", 1 - $(window).scrollTop() / 250);
+  });
+    </script>
+</body>
+</html>

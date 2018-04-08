@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+html {
+	height: 100%;
+}
+body {
+	background: #56B4D7;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #56B4D7, #56B4D7);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #56B4D7, #ddf0f7);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 1000px;
+}
+.centered {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-transform: lowercase;
+	font-size: 3em;
+	text-align: center;
+	font-family: 'Abril Fatface', cursive;
+	font-weigtht: 900;
+	color: #fff;
+    opacity: 1;
+}
+.one {
+	display: inline;
+	margin: 10px;
+	animation: bounceIn 2s;
+}
+.two {
+	display: inline;
+	margin: 10px;
+	animation: bounceIn 3.7s;
+}
+.three {
+	display: inline;
+	margin: 10px;
+	animation: bounceIn 4.7s;
+}
+.four {
+	display: inline;
+	margin: 10px;
+	animation: bounceIn 5.7s;
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(2.05);
+	}
+}
