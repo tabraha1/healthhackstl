@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:300,700|Bitter');
+
+html {
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: auto 0;
+    padding: 20px;
+	font-size: 16px;
+	line-height: 1.1em;
+	background: #eee url(images/ferris_wheel.jpg) no-repeat 30% top;
+	background-size: cover;
+}
+
+article {
+	margin: 30px auto 0 auto;
+	width: 90%;
+	padding: 0;
+}
+
+h1 {
+	margin: 15px 0 .7em 0;
+	font-family: 'Bitter', serif;
+	font-size: 1.75em;
+	letter-spacing: 1px;
+	font-weight: normal;
+	color: #f6b84d;
+}
+
+p { margin: 0 0 1em 0; }
+
+table {
+	color: rgba(255,255,255,.8);
+	border: 1px solid rgba(255,255,255,.5);
+	border-collapse: collapse;
+	font-size: .9em;
+	background-color: rgba(42, 0, 78,.9);
+	margin-bottom: 50px;
+}
+
+table td {
+	padding: 5px 12px;
+}
+
+table thead tr {
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	background-color: rgba(0, 10, 255, 0.2)
+}
+
+table thead td {
+	white-space: nowrap;
+	font-size: .7em;
+	text-transform: uppercase;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+table tbody tr:nth-child(2) {
+    background-color: rgba(255,255,255,.1);
+}
+
+table tbody tr:nth-child(1) {
+    background-color: rgba(255,255,255,.3);
+    border-left: 1px solid rgba(255,255,255.2);
+    border-right: 1px solid rgba(255,255,255.2);
+    text-align:center;
+}
+
+
+</style>
+
+<article>
+
+    <!-- Content source: Wikipedia -->
+
+    <h1>Your Current Health Stat</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Height inch</td>
+            <td>Age</td>
+            <td>Risk Factors</td>
+            <td>Lifestyle</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>James Jenkins</td>
+            <td>63in</td>
+            <td>07/20/1987</td>
+            <td>Low</td>
+            <td>Moderate - Needs more Aerobic activity</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</article>
+
+<article>
+
+    <!-- Content source: Wikipedia -->
+
+    <h1>Your Current Prescriptions</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <td>Drug_Group</td>
+            <td>Drug_Name</td>
+            <td>Dose</td>
+            <td>Route</td>
+            <td>Measure</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Xanax</td>
+            <td>alprazolam</td>
+            <td>TABLET</td>
+            <td>ORAL</td>
+            <td>mg/1</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</article>
+
+<article>
+
+    <!-- Content source: Wikipedia -->
+
+    <h1>Wearable</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <td>Device_ID</td>
+            <td>Calories_Expended</td>
+            <td>Avg_BPM</td>
+            <td>DATE</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>170600</td>
+            <td>889</td>
+            <td>173</td>
+            <td>12/19/2007</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</article>
+
+<form id="signup" method="post" action="#">
+
+
+    <h3>Please complete the form below</h3>
+
+    <h4>PREVENTIVE SERVICES LIST</h4>
+    <input id="cat-d" type="checkbox" name="design"><label for="cat-d">Blood Pressure Screening</label>
+    <br>
+    <input id="cat-h" type="checkbox" name="html-css"><label for="cat-h">Diabetes (Type 2) Screening</label>
+    <br>
+    <input id="cat-j" type="checkbox" name="js"><label for="cat-j">Cholesterol Screening</label>
+    <br>
+
+    <fieldset>
+
+        <legend>Here are the top five things you can do to be healthier:</legend>
+
+        <h4>Choose a goal</h4>
+        <input id="format-t" type="radio" name="format"><label for="format-t">Be tobacco-free
+        <input id="format-h" type="radio" name="format"><label for="format-h">Be physically active</label>
+        <input id="format-h" type="radio" name="format"><label for="format-h">Maintain a healthy weight</label>
+        <input id="format-h" type="radio" name="format"><label for="format-h">Go to bed early</label>
+
+        <h4>Choose a frequency</h4>
+        <select id="frequency">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+        <br>
+
+        <h4>Comments</h4>
+        <textarea name="requests" rows="3" cols="30" placeholder="Please let us know what other options you'd like to have."></textarea>
+
+    </fieldset>
+
+    <h4>Email me health tips</h4>
+    <input id="email" type="text" size="45" placeholder="Enter your full email address">
+    <br>
+
+    <input type="submit" value="Sign me up">
+
+</form>
+
+
+
+</body>
+</html>

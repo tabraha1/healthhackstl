@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value="health")
 public class HealthController {
 
+    @RequestMapping(value="")
+    public String index(Model model) {
+
+        return "health/index";
+    }
+
     @RequestMapping(value="/diet")
     public String diet(Model model) {
 

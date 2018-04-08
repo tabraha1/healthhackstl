@@ -1,16 +1,16 @@
-package com.healthhackstl.data;
+package com.healthhackstl.data.entity;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name="USERS")
-public class User {
+public class Patient {
 
     @Id
     @Column(name="USER_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private int id;
 
     @Column(name="FIRST_NAME")
     private String firstName;
@@ -22,21 +22,21 @@ public class User {
     private String sex;
 
     @Column(name="DOB")
-    private Date dob;
+    private Date DOB;
 
     @Column(name="HEIGHT")
     private int height;
 
     @Column(name="WEIGHT")
-    private int weight;
+    private int Weight;
 
 
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -64,12 +64,12 @@ public class User {
         this.sex = sex;
     }
 
-    public Date getDob() {
-        return dob;
+    public Date getDOB() {
+        return DOB;
     }
 
-    public void setDob(Date dob) {
-        this.dob = dob;
+    public void setDOB(Date DOB) {
+        this.DOB = DOB;
     }
 
     public int getHeight() {
@@ -81,10 +81,10 @@ public class User {
     }
 
     public int getWeight() {
-        return weight;
+        return Weight;
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        Weight = weight;
     }
 }

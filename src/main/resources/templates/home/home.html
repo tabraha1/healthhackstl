@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<!--<header th:replace="fragments :: header"></header>-->
+
+</body>
+
+<ul th:text="doc : ${doctors}">
+    <li th:text="{doc.lastName}"></li>
+    <li th:text="{doc.visitInfo}"></li>
+</ul>
+
+</html>

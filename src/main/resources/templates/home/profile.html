@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+<body>
+
+<table>
+    <tr>
+        <th>User</th>
+        <th>Last Visit</th>
+        <th>Doctor</th>
+    </tr>
+    <tr th:each="user : ${userInfo}">
+        <td th:text="{user.lastName}">Full Name</td>
+        <td th:text="{user.sex}">Last Visit</td>
+        <td th:text="{user.dob}">Doctor</td>
+    </tr>
+</table>
+
+</body>
+</html>

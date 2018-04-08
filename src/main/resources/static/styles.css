@@ -11,7 +11,7 @@ body {
   font-family: 'Abel', sans-serif;
 }
 
-p {
+a, p {
   margin: 0;
   color: #fff;
 }
