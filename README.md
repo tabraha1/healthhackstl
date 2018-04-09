@@ -8,6 +8,10 @@
 
 <h1>Technologies</h1>
 
+<ul>
 <li> Java </li>
 <li> Spring Boot</li>
 <li> SQL </li>
+</ul>
+
+<img src="healthcheck.png" style: style="padding: 100px" />
